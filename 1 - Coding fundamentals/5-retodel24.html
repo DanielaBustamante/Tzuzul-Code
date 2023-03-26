@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        EJERCICIO 1:
+        Escriba un programa para verificar si un número ingresado por el usuario es 
+        par o impar.
+        */
+
+        let num = prompt("Ingresa un numero: ") // tambien podria usar var
+        if (num % 2 == 0){
+            console.log('Es numero ' + num + ' es par')
+        }else{
+            console.log('Es numero ' + num + ' es impar')
+        }
+        
+        /*
+        EJERCICIO 2:
+        Escribe un programa para comprobar si un número es divisible por 7 o no.
+        */
+
+        if (num % 7 == 0){
+            console.log('y es divisible por 7')
+        }else{
+            console.log('y NO es un numero divisible por 7')
+        }
+
+        /* 
+        EJERCICIO 3:
+        Escriba un programa para calcular la factura de electricidad (acepte el 
+        número de unidades del usuario) de acuerdo con los siguientes criterios:
+            Precio unitario  
+            Primeras 100 unidades sin cargo
+            Siguientes 100 unidades Rs 5 por unidad
+            Después de 200 unidades Rs 10 por unidad
+            (Por ejemplo, si la unidad de entrada es 350, el monto total de la 
+            factura es Rs2000)
+        */
+        
+        let numero_unidades_entrada = prompt("Ingresa el numero de unidades: ")
+        let monto_final
+        let sin_cargo = 100
+
+        if (numero_unidades_entrada >= 1 && numero_unidades_entrada <= 100){
+            // 100 unidades * 0
+            monto_final = numero_unidades_entrada * 0
+            console.log('Primeras 100 unidades sin cargo')
+        }
+
+        if (numero_unidades_entrada > 100 && numero_unidades_entrada <= 200){
+            // Si tengo 150 por ejemplo seria = 50 unidades * 5 
+            monto_final = (numero_unidades_entrada - sin_cargo) * 5
+            console.log('Siguientes 100 con cargo de 5 x unidad')
+        }
+
+        if (numero_unidades_entrada > 200){
+            // Si quiero ingresar 350 por ejemplo seria: 100 * 0 + 100 * 5 + 150 * 10 = 0 + 500 + 1500
+            monto_final = ( (numero_unidades_entrada - sin_cargo*2) * 10 + sin_cargo * 5 )
+
+            console.log('Siguientes 100 con cargo de 10 x unidad')
+        }
+
+        console.log('El monto de la factura es de:', monto_final)
+
+    </script>
+</body
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // codigo de JavaScrip
+        // Operadores
+        // == operador de igualdad
+        // === operador de igualdad estricta
+
+        if("5"==5){ 
+            // el str lo compara con el numero para eso usa conversion
+            // le quita las comillas 
+            console.log("Es verdadero")
+        }else{
+            console.log("Es falso")
+        }
+
+        console.log("Segunda condicion, operador estricto")
+
+        if("5"===5){ // lo compara tal cual esta
+            console.log("Es verdadero")
+        }else{
+            console.log("Es falso")
+        }
+
+        //operadores logicos
+        var clima = "soleado" // es un str
+        var temperatura = 36
+
+        // && and o y - || or - 
+        if(clima==="soleado" || temperatura>32 && temperatura<50){ 
+            // solo se tiene que cumplir una 
+            console.log("Es un dia muy caluroso")
+        }
+
+        if(clima==="soleado"){
+            if(temperatura>32){
+                console.log("Es un dia muy caluroso")
+            }
+        }
+
+    </script>
+</body>
+</html>
